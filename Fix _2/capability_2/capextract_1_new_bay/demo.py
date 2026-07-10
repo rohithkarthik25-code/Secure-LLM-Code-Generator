@@ -119,7 +119,7 @@ def run_capability_extraction_streaming(
     prompt: str,
     intent: IntentIR,
     language: str,
-) -> tuple[CapabilityGraphIR, str]:
+) -> tuple[CapabilityGraphIR, str, int]:
     """
     Runs the full Capability Extraction pipeline with LLM streaming and steering feedback loop (max 2 retries).
     """
@@ -297,7 +297,7 @@ def run_capability_extraction_streaming(
             attempts_history.append((final_code, decision["feedback"]))
             attempt += 1
 
-    return final_graph, final_code
+    return final_graph, final_code, attempt + 1
 
 
 def run_capability_extraction_static(
@@ -342,6 +342,7 @@ def build_combined_output(
     cap_graph: CapabilityGraphIR,
     code: str,
     elapsed: float,
+    attempts_taken: int = 1,
 ) -> dict:
     """
     Builds the combined IR output that downstream layers consume:
@@ -428,6 +429,7 @@ def build_combined_output(
         "violation_count":           len(violations),
         "primary_intent":            primary_intent,
         "functional_caps_detected":  cap_dict.get("functional_capabilities", []),
+        "attempts_taken":            attempts_taken,
     }
 
     output["generated_code"] = code
@@ -588,6 +590,7 @@ def print_cross_layer(combined: dict):
     print(f"  Alignment             : {alignment_display.get(alignment, alignment)}")
     print(f"  Primary Intent        : {cross.get('primary_intent', 'N/A')}")
     print(f"  Functional Caps       : {cross.get('functional_caps_detected', [])}")
+    print(f"  Attempts Taken        : {cross.get('attempts_taken', 'N/A')}")
 
     violations = cross.get("violations", [])
     if violations:
@@ -608,7 +611,8 @@ def print_final_output_summary(combined: dict):
           f"prims={len(combined['capability_ir'].get('primitive_capabilities', []))}, "
           f"funcs={len(combined['capability_ir'].get('functional_capabilities', []))})")
     print(f"  cross_layer_analysis: ✓ ("
-          f"alignment={combined['cross_layer_analysis']['alignment']})")
+          f"alignment={combined['cross_layer_analysis']['alignment']}, "
+          f"attempts={combined['cross_layer_analysis'].get('attempts_taken', 1)})")
     print(f"  generated_code     : ✓ ({len(combined.get('generated_code', ''))} chars)")
 
 
@@ -696,11 +700,12 @@ def run_pipeline(prompt: str, mode: str = "llm", code: str = ""):
     # LAYER 2: Capability Extraction (our pipeline)
     # ══════════════════════════════════════════════════════════════
     if mode == "llm":
-        cap_graph, final_code = run_capability_extraction_streaming(
+        cap_graph, final_code, attempts_taken = run_capability_extraction_streaming(
             prompt, intent, language
         )
     else:
         cap_graph, final_code = run_capability_extraction_static(code, intent)
+        attempts_taken = 1
 
     # Display Layer 2 output
     print_layer2_output(cap_graph)
@@ -711,7 +716,7 @@ def run_pipeline(prompt: str, mode: str = "llm", code: str = ""):
     # Combined Output (for downstream architecture)
     # ══════════════════════════════════════════════════════════════
     combined = build_combined_output(
-        prompt, intent_payload, cap_graph, final_code, elapsed
+        prompt, intent_payload, cap_graph, final_code, elapsed, attempts_taken
     )
 
     # Display cross-layer analysis

@@ -70,13 +70,13 @@ def run_benchmark():
                 language = "python"
                 
             # 2. Run Layer 2: Capability Extraction + Steering Feedback Loop
-            cap_graph, final_code = run_capability_extraction_streaming(
+            cap_graph, final_code, attempts_taken = run_capability_extraction_streaming(
                 case['prompt'], intent, language
             )
             
             elapsed = time.time() - t0
             combined = build_combined_output(
-                case['prompt'], intent_payload, cap_graph, final_code, elapsed
+                case['prompt'], intent_payload, cap_graph, final_code, elapsed, attempts_taken
             )
             
             # Extract final decisions
@@ -90,6 +90,7 @@ def run_benchmark():
                 "alignment": alignment,
                 "violation_count": len(violations),
                 "code_length": len(final_code),
+                "attempts_taken": attempts_taken,
                 "elapsed_seconds": round(elapsed, 2),
                 "status": "SUCCESS"
             })
@@ -104,16 +105,16 @@ def run_benchmark():
             })
             
     # Print Markdown Summary
-    print("\n" + "=" * 75)
+    print("\n" + "=" * 80)
     print("   BENCHMARK RUN SUMMARY")
-    print("=" * 75)
-    print(f"| Case ID | Tier | Alignment Verdict | Violations | Time (s) | Status |")
-    print(f"| :--- | :--- | :--- | :--- | :--- | :--- |")
+    print("=" * 80)
+    print(f"| Case ID | Tier | Alignment Verdict | Violations | Attempts | Time (s) | Status |")
+    print(f"| :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
     for r in results:
         if r["status"] == "SUCCESS":
-            print(f"| {r['id']} | {r['tier']} | {r['alignment']} | {r['violation_count']} | {r['elapsed_seconds']} | {r['status']} |")
+            print(f"| {r['id']} | {r['tier']} | {r['alignment']} | {r['violation_count']} | {r['attempts_taken']} | {r['elapsed_seconds']} | {r['status']} |")
         else:
-            print(f"| {r['id']} | {r['tier']} | N/A | N/A | N/A | {r['status']} (Err: {r['error']}) |")
+            print(f"| {r['id']} | {r['tier']} | N/A | N/A | N/A | N/A | {r['status']} (Err: {r['error']}) |")
             
     # Save to file
     out_path = os.path.join(ROOT, "orchestrator_benchmark_results.json")

@@ -295,6 +295,11 @@ class DeepSeekAdapter(LLMAdapter):
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         
         print(f"[DeepSeekAdapter] Loading model from {model_path}...")
+        import gc
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,

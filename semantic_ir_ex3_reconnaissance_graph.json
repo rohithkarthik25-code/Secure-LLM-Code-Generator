@@ -1,0 +1,1177 @@
+{
+  "node_count": 63,
+  "edge_count": 64,
+  "nodes": [
+    {
+      "id": "intent:reconnaissance",
+      "label": "RECONNAISSANCE",
+      "kind": "INTENT",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 2,
+      "similarity": null
+    },
+    {
+      "id": "secondary_intent:network_communication",
+      "label": "network_communication (0.36)",
+      "kind": "SECONDARY",
+      "color": "#7f8c8d",
+      "value": 0.358,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 2,
+      "similarity": null
+    },
+    {
+      "id": "secondary_intent:process_execution",
+      "label": "process_execution (0.26)",
+      "kind": "SECONDARY",
+      "color": "#7f8c8d",
+      "value": 0.255,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 2,
+      "similarity": null
+    },
+    {
+      "id": "secondary_intent:input_capture",
+      "label": "input_capture (0.23)",
+      "kind": "SECONDARY",
+      "color": "#7f8c8d",
+      "value": 0.231,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 5,
+      "similarity": null
+    },
+    {
+      "id": "role:agent",
+      "label": "AGENT: script",
+      "kind": "ROLE",
+      "color": "#3498db",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:action",
+      "label": "ACTION: build -> find -> open",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:target",
+      "label": "TARGET: network",
+      "kind": "TARGET",
+      "color": "#f39c12",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:method",
+      "label": "METHOD: port scan/enumeration",
+      "kind": "METHOD",
+      "color": "#3498db",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:destination",
+      "label": "DESTINATION: attacker knowledge",
+      "kind": "DESTINATION",
+      "color": "#e74c3c",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:goal",
+      "label": "GOAL: scanner",
+      "kind": "GOAL",
+      "color": "#9b59b6",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:information_gathering",
+      "label": "information gathering",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:network_scanning",
+      "label": "network scanning",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.75,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:enumeration",
+      "label": "enumeration",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:fingerprinting",
+      "label": "fingerprinting",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:target_profiling",
+      "label": "target profiling",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:discovery",
+      "label": "discovery",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:build",
+      "label": "verb: build",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:find",
+      "label": "verb: find",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:open",
+      "label": "verb: open",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_network",
+      "label": "typical: network",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_port",
+      "label": "typical: port",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_service",
+      "label": "typical: service",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "ontology_root",
+      "label": "INTENT ROOT",
+      "kind": "ONTOLOGY_ROOT",
+      "color": "#2c3e50",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "category:SUSPICIOUS",
+      "label": "SUSPICIOUS",
+      "kind": "CATEGORY",
+      "color": "#34495e",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "mitre:reconnaissance",
+      "label": "TA0043 - Reconnaissance",
+      "kind": "MITRE",
+      "color": "#1abc9c",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "mitre:network_communication",
+      "label": "TA0011 - Command and Control",
+      "kind": "MITRE",
+      "color": "#1abc9c",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "mitre:process_execution",
+      "label": "TA0002 - Execution",
+      "kind": "MITRE",
+      "color": "#1abc9c",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "mitre:input_capture",
+      "label": "TA0009 - Collection",
+      "kind": "MITRE",
+      "color": "#1abc9c",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "neighbor:network_communication",
+      "label": "network_communication",
+      "kind": "NEIGHBOR",
+      "color": "#95a5a6",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 2,
+      "similarity": null
+    },
+    {
+      "id": "neighbor:file_system_access",
+      "label": "file_system_access",
+      "kind": "NEIGHBOR",
+      "color": "#95a5a6",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 1,
+      "similarity": null
+    },
+    {
+      "id": "prompt",
+      "label": "PROMPT: Build a network scanner that f...",
+      "kind": "PROMPT",
+      "color": "#34495e",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "similarity:data_exfiltration",
+      "label": "data_exfiltration (0.199)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1987,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.19871725142002106
+    },
+    {
+      "id": "similarity:privilege_escalation",
+      "label": "privilege_escalation (-0.009)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0092,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.009198229759931564
+    },
+    {
+      "id": "similarity:network_communication",
+      "label": "network_communication (0.242)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.2418,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.24175909161567688
+    },
+    {
+      "id": "similarity:file_system_access",
+      "label": "file_system_access (0.172)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1717,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1717156022787094
+    },
+    {
+      "id": "similarity:process_execution",
+      "label": "process_execution (0.105)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1046,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.10456536710262299
+    },
+    {
+      "id": "similarity:code_injection",
+      "label": "code_injection (0.081)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0811,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.08108945190906525
+    },
+    {
+      "id": "similarity:reconnaissance",
+      "label": "reconnaissance (0.565)",
+      "kind": "SIMILARITY",
+      "color": "#e74c3c",
+      "value": 0.5647,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.5647169351577759
+    },
+    {
+      "id": "similarity:legitimate_automation",
+      "label": "legitimate_automation (0.073)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0733,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.07334713637828827
+    },
+    {
+      "id": "similarity:system_monitoring",
+      "label": "system_monitoring (0.105)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1054,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.10539698600769043
+    },
+    {
+      "id": "similarity:unknown",
+      "label": "unknown (-0.064)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0636,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.06359094381332397
+    },
+    {
+      "id": "similarity:input_capture",
+      "label": "input_capture (0.033)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0334,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.033425524830818176
+    },
+    {
+      "id": "similarity:persistence",
+      "label": "persistence (-0.005)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0054,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.005440250039100647
+    },
+    {
+      "id": "similarity:defense_evasion",
+      "label": "defense_evasion (0.113)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1131,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.11305274069309235
+    },
+    {
+      "id": "similarity:database_access",
+      "label": "database_access (0.175)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1745,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.17451712489128113
+    },
+    {
+      "id": "similarity:memory_manipulation",
+      "label": "memory_manipulation (0.005)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0048,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.004830174148082733
+    },
+    {
+      "id": "similarity:cryptographic_operation",
+      "label": "cryptographic_operation (0.055)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0552,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.05517743527889252
+    },
+    {
+      "id": "similarity:web_scraping",
+      "label": "web_scraping (0.090)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0899,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.0899464339017868
+    },
+    {
+      "id": "feature:severity",
+      "label": "severity: 0.25",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.25,
+      "provenance": null,
+      "semantic_category": "risk_score",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:risk_score",
+      "label": "risk_score: 0.40",
+      "kind": "FEATURE",
+      "color": "#f39c12",
+      "value": 0.4,
+      "provenance": null,
+      "semantic_category": "risk_score",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_ip",
+      "label": "has_ip: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_url",
+      "label": "has_url: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_filepath",
+      "label": "has_filepath: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:threat_amplifiers",
+      "label": "threat_amplifiers: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:action_verb_density",
+      "label": "action_verb_density: 0.60",
+      "kind": "FEATURE",
+      "color": "#f39c12",
+      "value": 0.6,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:target_density",
+      "label": "target_density: 0.17",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.1667,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:temporal_signal",
+      "label": "temporal_signal: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:is_compound",
+      "label": "is_compound: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:complexity",
+      "label": "complexity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:multi_target",
+      "label": "multi_target: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:svo_density",
+      "label": "svo_density: 0.40",
+      "kind": "FEATURE",
+      "color": "#f39c12",
+      "value": 0.4,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:concept_density",
+      "label": "concept_density: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:sensitivity",
+      "label": "sensitivity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "intent:reconnaissance",
+      "target": "secondary_intent:network_communication",
+      "type": "secondary_intent",
+      "label": "also:network_communication",
+      "weight": 0.358
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "secondary_intent:process_execution",
+      "type": "secondary_intent",
+      "label": "also:process_execution",
+      "weight": 0.255
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "secondary_intent:input_capture",
+      "type": "secondary_intent",
+      "label": "also:input_capture",
+      "weight": 0.231
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "role:agent",
+      "type": "has_role",
+      "label": "has_role",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "role:goal",
+      "type": "achieves",
+      "label": "achieves",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:information_gathering",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:network_scanning",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.75
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:enumeration",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:fingerprinting",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:target_profiling",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:discovery",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "entity:verb:build",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "entity:verb:find",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "entity:verb:open",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:typical_network",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:typical_port",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "concept:typical_service",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "mitre:reconnaissance",
+      "type": "mapped_to",
+      "label": "mapped_to",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "neighbor:network_communication",
+      "type": "related_to",
+      "label": "sibling",
+      "weight": 0.3
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "neighbor:file_system_access",
+      "type": "related_to",
+      "label": "sibling",
+      "weight": 0.3
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "prompt",
+      "type": "related_to",
+      "label": "analyzed_as",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:severity",
+      "type": "has_feature",
+      "label": "0.25",
+      "weight": 0.25
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:risk_score",
+      "type": "has_feature",
+      "label": "0.40",
+      "weight": 0.4
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:has_ip",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:has_url",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:has_filepath",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:threat_amplifiers",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:action_verb_density",
+      "type": "has_feature",
+      "label": "0.60",
+      "weight": 0.6
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:target_density",
+      "type": "has_feature",
+      "label": "0.17",
+      "weight": 0.1667
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:temporal_signal",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:is_compound",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:complexity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:multi_target",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:svo_density",
+      "type": "has_feature",
+      "label": "0.40",
+      "weight": 0.4
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:concept_density",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:reconnaissance",
+      "target": "feature:sensitivity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "secondary_intent:network_communication",
+      "target": "mitre:network_communication",
+      "type": "mapped_to",
+      "label": "mapped_to",
+      "weight": 0.358
+    },
+    {
+      "source": "secondary_intent:process_execution",
+      "target": "mitre:process_execution",
+      "type": "mapped_to",
+      "label": "mapped_to",
+      "weight": 0.255
+    },
+    {
+      "source": "secondary_intent:input_capture",
+      "target": "mitre:input_capture",
+      "type": "mapped_to",
+      "label": "mapped_to",
+      "weight": 0.231
+    },
+    {
+      "source": "role:agent",
+      "target": "role:action",
+      "type": "performs",
+      "label": "performs",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:target",
+      "type": "acts_on",
+      "label": "acts_on",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:method",
+      "type": "uses",
+      "label": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:destination",
+      "type": "sends_to",
+      "label": "sends_to",
+      "weight": 1.0
+    },
+    {
+      "source": "role:target",
+      "target": "role:destination",
+      "type": "data_flow",
+      "label": "data_flow",
+      "weight": 1.0
+    },
+    {
+      "source": "ontology_root",
+      "target": "category:SUSPICIOUS",
+      "type": "has_category",
+      "label": "has_category",
+      "weight": 1.0
+    },
+    {
+      "source": "category:SUSPICIOUS",
+      "target": "intent:reconnaissance",
+      "type": "contains",
+      "label": "contains",
+      "weight": 0.4
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:data_exfiltration",
+      "type": "similar_to",
+      "label": "0.199",
+      "weight": 0.1987
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:privilege_escalation",
+      "type": "similar_to",
+      "label": "-0.009",
+      "weight": -0.0092
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:network_communication",
+      "type": "similar_to",
+      "label": "0.242",
+      "weight": 0.2418
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:file_system_access",
+      "type": "similar_to",
+      "label": "0.172",
+      "weight": 0.1717
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:process_execution",
+      "type": "similar_to",
+      "label": "0.105",
+      "weight": 0.1046
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:code_injection",
+      "type": "similar_to",
+      "label": "0.081",
+      "weight": 0.0811
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:reconnaissance",
+      "type": "similar_to",
+      "label": "0.565",
+      "weight": 0.5647
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:legitimate_automation",
+      "type": "similar_to",
+      "label": "0.073",
+      "weight": 0.0733
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:system_monitoring",
+      "type": "similar_to",
+      "label": "0.105",
+      "weight": 0.1054
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:unknown",
+      "type": "similar_to",
+      "label": "-0.064",
+      "weight": -0.0636
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:input_capture",
+      "type": "similar_to",
+      "label": "0.033",
+      "weight": 0.0334
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:persistence",
+      "type": "similar_to",
+      "label": "-0.005",
+      "weight": -0.0054
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:defense_evasion",
+      "type": "similar_to",
+      "label": "0.113",
+      "weight": 0.1131
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:database_access",
+      "type": "similar_to",
+      "label": "0.175",
+      "weight": 0.1745
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:memory_manipulation",
+      "type": "similar_to",
+      "label": "0.005",
+      "weight": 0.0048
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:cryptographic_operation",
+      "type": "similar_to",
+      "label": "0.055",
+      "weight": 0.0552
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:web_scraping",
+      "type": "similar_to",
+      "label": "0.090",
+      "weight": 0.0899
+    },
+    {
+      "source": "similarity:reconnaissance",
+      "target": "intent:reconnaissance",
+      "type": "related_to",
+      "label": "is_primary_intent",
+      "weight": 1.0
+    }
+  ],
+  "analysis": {
+    "node_count": 63,
+    "edge_count": 64,
+    "density": 0.0164,
+    "top_central_nodes": [
+      [
+        "intent:reconnaissance",
+        0.6129032258064516
+      ],
+      [
+        "prompt",
+        0.29032258064516125
+      ],
+      [
+        "role:action",
+        0.06451612903225806
+      ],
+      [
+        "secondary_intent:network_communication",
+        0.03225806451612903
+      ],
+      [
+        "secondary_intent:process_execution",
+        0.03225806451612903
+      ]
+    ],
+    "weakly_connected_components": 1
+  }
+}

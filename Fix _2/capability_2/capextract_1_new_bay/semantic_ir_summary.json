@@ -1,0 +1,88 @@
+{
+  "total_nodes": 48,
+  "total_edges": 49,
+  "primary_intent": "legitimate_automation",
+  "secondary_intents": [],
+  "risk_level": "MINIMAL",
+  "risk_score": 0.1,
+  "mitre_tactic": "N/A - Legitimate Activity",
+  "mitre_technique": "N/A",
+  "severity": 1,
+  "disambiguation": {
+    "method": "sbert",
+    "ranked_similarities": [
+      {
+        "label": "code_injection",
+        "similarity": 0.2084
+      },
+      {
+        "label": "privilege_escalation",
+        "similarity": 0.1207
+      },
+      {
+        "label": "process_execution",
+        "similarity": -0.01
+      },
+      {
+        "label": "file_system_access",
+        "similarity": -0.0247
+      },
+      {
+        "label": "reconnaissance",
+        "similarity": -0.0351
+      },
+      {
+        "label": "unknown",
+        "similarity": -0.0521
+      },
+      {
+        "label": "legitimate_automation",
+        "similarity": -0.0589
+      },
+      {
+        "label": "system_monitoring",
+        "similarity": -0.077
+      },
+      {
+        "label": "data_exfiltration",
+        "similarity": -0.0921
+      },
+      {
+        "label": "network_communication",
+        "similarity": -0.1271
+      }
+    ],
+    "top_match": {
+      "label": "code_injection",
+      "similarity": 0.2084
+    },
+    "agrees_with_classifier": false,
+    "margin_to_runner_up": 0.0877
+  },
+  "feature_vector": {
+    "severity": 0.0,
+    "risk_score": 0.1,
+    "has_ip": 0.0,
+    "has_url": 0.0,
+    "has_filepath": 0.0,
+    "threat_amplifiers": 0.0,
+    "action_verb_density": 0.2,
+    "target_density": 0.0,
+    "temporal_signal": 0.0,
+    "is_compound": 0.0,
+    "complexity": 0.0,
+    "multi_target": 0.0,
+    "svo_density": 0.2,
+    "concept_density": 1.0,
+    "sensitivity": 0.0
+  },
+  "classifier_conflict": true,
+  "conflict_detail": {
+    "rule_top": "unknown",
+    "rule_top_score": 1.0,
+    "llm_top": "legitimate_automation",
+    "llm_top_score": 0.114,
+    "score_gap": 0.886,
+    "note": "Rule-based and LLM classifiers chose different primary intents with a significant score gap. Treat classification confidence as reduced."
+  }
+}

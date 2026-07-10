@@ -1,0 +1,1119 @@
+{
+  "node_count": 59,
+  "edge_count": 62,
+  "nodes": [
+    {
+      "id": "intent:input_capture",
+      "label": "INPUT_CAPTURE",
+      "kind": "INTENT",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 5,
+      "similarity": null
+    },
+    {
+      "id": "role:agent",
+      "label": "AGENT: script",
+      "kind": "ROLE",
+      "color": "#3498db",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:action",
+      "label": "ACTION: read -> create -> send",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:target",
+      "label": "TARGET: /etc/shadow",
+      "kind": "TARGET",
+      "color": "#f39c12",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:method",
+      "label": "METHOD: OS hooks / pynput / pyautogui",
+      "kind": "METHOD",
+      "color": "#3498db",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:destination",
+      "label": "DESTINATION: 192.168.1.99",
+      "kind": "DESTINATION",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:goal",
+      "label": "GOAL: script",
+      "kind": "GOAL",
+      "color": "#9b59b6",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:file_path:_etc_shadow",
+      "label": "path: /etc/shadow",
+      "kind": "ENTITY",
+      "color": "#e67e22",
+      "value": 0.8,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:ip:192_168_1_99",
+      "label": "IP: 192.168.1.99",
+      "kind": "ENTITY",
+      "color": "#e67e22",
+      "value": 0.9,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:keylogger",
+      "label": "keylogger",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:input_recording",
+      "label": "input recording",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:screen_capture",
+      "label": "screen capture",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:clipboard_theft",
+      "label": "clipboard theft",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:user_surveillance",
+      "label": "user surveillance",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:covert_monitoring",
+      "label": "covert monitoring",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:read",
+      "label": "verb: read",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:create",
+      "label": "verb: create",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:send",
+      "label": "verb: send",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_keyboard",
+      "label": "typical: keyboard",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_clipboard",
+      "label": "typical: clipboard",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_screen",
+      "label": "typical: screen",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "ontology_root",
+      "label": "INTENT ROOT",
+      "kind": "ONTOLOGY_ROOT",
+      "color": "#2c3e50",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "category:MALICIOUS",
+      "label": "MALICIOUS",
+      "kind": "CATEGORY",
+      "color": "#34495e",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "mitre:input_capture",
+      "label": "TA0009 - Collection",
+      "kind": "MITRE",
+      "color": "#1abc9c",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "neighbor:data_exfiltration",
+      "label": "data_exfiltration",
+      "kind": "NEIGHBOR",
+      "color": "#95a5a6",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 5,
+      "similarity": null
+    },
+    {
+      "id": "neighbor:system_monitoring",
+      "label": "system_monitoring",
+      "kind": "NEIGHBOR",
+      "color": "#95a5a6",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 1,
+      "similarity": null
+    },
+    {
+      "id": "prompt",
+      "label": "PROMPT: Create a script that reads /et...",
+      "kind": "PROMPT",
+      "color": "#34495e",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "similarity:data_exfiltration",
+      "label": "data_exfiltration (0.373)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.3727,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.3726661801338196
+    },
+    {
+      "id": "similarity:privilege_escalation",
+      "label": "privilege_escalation (0.113)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1132,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.11324088275432587
+    },
+    {
+      "id": "similarity:network_communication",
+      "label": "network_communication (0.410)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.41,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.40998291969299316
+    },
+    {
+      "id": "similarity:file_system_access",
+      "label": "file_system_access (0.210)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.2104,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.21041160821914673
+    },
+    {
+      "id": "similarity:process_execution",
+      "label": "process_execution (0.169)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1693,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.169331356883049
+    },
+    {
+      "id": "similarity:code_injection",
+      "label": "code_injection (0.178)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1785,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.17847910523414612
+    },
+    {
+      "id": "similarity:reconnaissance",
+      "label": "reconnaissance (0.370)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.3695,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.36954253911972046
+    },
+    {
+      "id": "similarity:legitimate_automation",
+      "label": "legitimate_automation (0.133)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1329,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.13287630677223206
+    },
+    {
+      "id": "similarity:system_monitoring",
+      "label": "system_monitoring (0.138)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1384,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1384228765964508
+    },
+    {
+      "id": "similarity:unknown",
+      "label": "unknown (0.082)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0817,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.08167923241853714
+    },
+    {
+      "id": "similarity:input_capture",
+      "label": "input_capture (0.108)",
+      "kind": "SIMILARITY",
+      "color": "#e74c3c",
+      "value": 0.1082,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1081666499376297
+    },
+    {
+      "id": "similarity:persistence",
+      "label": "persistence (0.041)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.0413,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.04125431180000305
+    },
+    {
+      "id": "similarity:defense_evasion",
+      "label": "defense_evasion (0.183)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1826,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1826448142528534
+    },
+    {
+      "id": "similarity:database_access",
+      "label": "database_access (0.220)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.2202,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.22021245956420898
+    },
+    {
+      "id": "similarity:memory_manipulation",
+      "label": "memory_manipulation (0.204)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.2044,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.20441778004169464
+    },
+    {
+      "id": "similarity:cryptographic_operation",
+      "label": "cryptographic_operation (0.110)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1101,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1100512444972992
+    },
+    {
+      "id": "similarity:web_scraping",
+      "label": "web_scraping (0.169)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.169,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1690414398908615
+    },
+    {
+      "id": "feature:severity",
+      "label": "severity: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "risk_score",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:risk_score",
+      "label": "risk_score: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "risk_score",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_ip",
+      "label": "has_ip: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_url",
+      "label": "has_url: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_filepath",
+      "label": "has_filepath: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:threat_amplifiers",
+      "label": "threat_amplifiers: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:action_verb_density",
+      "label": "action_verb_density: 0.60",
+      "kind": "FEATURE",
+      "color": "#f39c12",
+      "value": 0.6,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:target_density",
+      "label": "target_density: 0.50",
+      "kind": "FEATURE",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:temporal_signal",
+      "label": "temporal_signal: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:is_compound",
+      "label": "is_compound: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:complexity",
+      "label": "complexity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:multi_target",
+      "label": "multi_target: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:svo_density",
+      "label": "svo_density: 0.40",
+      "kind": "FEATURE",
+      "color": "#f39c12",
+      "value": 0.4,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:concept_density",
+      "label": "concept_density: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:sensitivity",
+      "label": "sensitivity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "intent:input_capture",
+      "target": "role:agent",
+      "type": "has_role",
+      "label": "has_role",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "role:goal",
+      "type": "achieves",
+      "label": "achieves",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:keylogger",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:input_recording",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:screen_capture",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:clipboard_theft",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:user_surveillance",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:covert_monitoring",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "entity:verb:read",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "entity:verb:create",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "entity:verb:send",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "entity:ip:192_168_1_99",
+      "type": "involves",
+      "label": "involves",
+      "weight": 0.9
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "entity:file_path:_etc_shadow",
+      "type": "involves",
+      "label": "involves",
+      "weight": 0.8
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:typical_keyboard",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:typical_clipboard",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "concept:typical_screen",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "mitre:input_capture",
+      "type": "mapped_to",
+      "label": "mapped_to",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "neighbor:data_exfiltration",
+      "type": "related_to",
+      "label": "sibling",
+      "weight": 0.3
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "neighbor:system_monitoring",
+      "type": "related_to",
+      "label": "sibling",
+      "weight": 0.3
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "prompt",
+      "type": "related_to",
+      "label": "analyzed_as",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:severity",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:risk_score",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:has_ip",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:has_url",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:has_filepath",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:threat_amplifiers",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:action_verb_density",
+      "type": "has_feature",
+      "label": "0.60",
+      "weight": 0.6
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:target_density",
+      "type": "has_feature",
+      "label": "0.50",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:temporal_signal",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:is_compound",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:complexity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:multi_target",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:svo_density",
+      "type": "has_feature",
+      "label": "0.40",
+      "weight": 0.4
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:concept_density",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:input_capture",
+      "target": "feature:sensitivity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "role:agent",
+      "target": "role:action",
+      "type": "performs",
+      "label": "performs",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:target",
+      "type": "acts_on",
+      "label": "acts_on",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:method",
+      "type": "uses",
+      "label": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:destination",
+      "type": "sends_to",
+      "label": "sends_to",
+      "weight": 1.0
+    },
+    {
+      "source": "role:target",
+      "target": "role:destination",
+      "type": "data_flow",
+      "label": "data_flow",
+      "weight": 1.0
+    },
+    {
+      "source": "role:target",
+      "target": "entity:file_path:_etc_shadow",
+      "type": "has_entity",
+      "label": "contains",
+      "weight": 0.8
+    },
+    {
+      "source": "role:destination",
+      "target": "entity:ip:192_168_1_99",
+      "type": "has_entity",
+      "label": "resolves_to",
+      "weight": 0.8
+    },
+    {
+      "source": "ontology_root",
+      "target": "category:MALICIOUS",
+      "type": "has_category",
+      "label": "has_category",
+      "weight": 1.0
+    },
+    {
+      "source": "category:MALICIOUS",
+      "target": "intent:input_capture",
+      "type": "contains",
+      "label": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:data_exfiltration",
+      "type": "similar_to",
+      "label": "0.373",
+      "weight": 0.3727
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:privilege_escalation",
+      "type": "similar_to",
+      "label": "0.113",
+      "weight": 0.1132
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:network_communication",
+      "type": "similar_to",
+      "label": "0.410",
+      "weight": 0.41
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:file_system_access",
+      "type": "similar_to",
+      "label": "0.210",
+      "weight": 0.2104
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:process_execution",
+      "type": "similar_to",
+      "label": "0.169",
+      "weight": 0.1693
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:code_injection",
+      "type": "similar_to",
+      "label": "0.178",
+      "weight": 0.1785
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:reconnaissance",
+      "type": "similar_to",
+      "label": "0.370",
+      "weight": 0.3695
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:legitimate_automation",
+      "type": "similar_to",
+      "label": "0.133",
+      "weight": 0.1329
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:system_monitoring",
+      "type": "similar_to",
+      "label": "0.138",
+      "weight": 0.1384
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:unknown",
+      "type": "similar_to",
+      "label": "0.082",
+      "weight": 0.0817
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:input_capture",
+      "type": "similar_to",
+      "label": "0.108",
+      "weight": 0.1082
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:persistence",
+      "type": "similar_to",
+      "label": "0.041",
+      "weight": 0.0413
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:defense_evasion",
+      "type": "similar_to",
+      "label": "0.183",
+      "weight": 0.1826
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:database_access",
+      "type": "similar_to",
+      "label": "0.220",
+      "weight": 0.2202
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:memory_manipulation",
+      "type": "similar_to",
+      "label": "0.204",
+      "weight": 0.2044
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:cryptographic_operation",
+      "type": "similar_to",
+      "label": "0.110",
+      "weight": 0.1101
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:web_scraping",
+      "type": "similar_to",
+      "label": "0.169",
+      "weight": 0.169
+    },
+    {
+      "source": "similarity:input_capture",
+      "target": "intent:input_capture",
+      "type": "related_to",
+      "label": "is_primary_intent",
+      "weight": 1.0
+    }
+  ],
+  "analysis": {
+    "node_count": 59,
+    "edge_count": 62,
+    "density": 0.0181,
+    "top_central_nodes": [
+      [
+        "intent:input_capture",
+        0.6379310344827586
+      ],
+      [
+        "prompt",
+        0.3103448275862069
+      ],
+      [
+        "role:action",
+        0.06896551724137931
+      ],
+      [
+        "role:target",
+        0.05172413793103448
+      ],
+      [
+        "role:destination",
+        0.05172413793103448
+      ]
+    ],
+    "weakly_connected_components": 1
+  }
+}

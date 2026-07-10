@@ -1,0 +1,907 @@
+{
+  "node_count": 48,
+  "edge_count": 49,
+  "nodes": [
+    {
+      "id": "intent:legitimate_automation",
+      "label": "LEGITIMATE_AUTOMATION",
+      "kind": "INTENT",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 1,
+      "similarity": null
+    },
+    {
+      "id": "role:agent",
+      "label": "AGENT: script",
+      "kind": "ROLE",
+      "color": "#3498db",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:action",
+      "label": "ACTION: write",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:target",
+      "label": "TARGET: local files services",
+      "kind": "TARGET",
+      "color": "#f39c12",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:method",
+      "label": "METHOD: cron/scheduler",
+      "kind": "METHOD",
+      "color": "#3498db",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:destination",
+      "label": "DESTINATION: local system",
+      "kind": "DESTINATION",
+      "color": "#e74c3c",
+      "value": 0.4,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "role:goal",
+      "label": "GOAL: code",
+      "kind": "GOAL",
+      "color": "#9b59b6",
+      "value": 1.0,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:task_scheduling",
+      "label": "task scheduling",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:automation",
+      "label": "automation",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:maintenance",
+      "label": "maintenance",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:backup",
+      "label": "backup",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:deployment",
+      "label": "deployment",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:workflow",
+      "label": "workflow",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:productivity",
+      "label": "productivity",
+      "kind": "CONCEPT",
+      "color": "#9b59b6",
+      "value": 0.5,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "entity:verb:write",
+      "label": "verb: write",
+      "kind": "ACTION",
+      "color": "#2ecc71",
+      "value": 0.7,
+      "provenance": "extracted_from_prompt",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_cron",
+      "label": "typical: cron",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_schedule",
+      "label": "typical: schedule",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "concept:typical_backup",
+      "label": "typical: backup",
+      "kind": "CONCEPT",
+      "color": "#f39c12",
+      "value": 0.5,
+      "provenance": "inferred_from_ontology_template",
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "ontology_root",
+      "label": "INTENT ROOT",
+      "kind": "ONTOLOGY_ROOT",
+      "color": "#2c3e50",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "category:BENIGN",
+      "label": "BENIGN",
+      "kind": "CATEGORY",
+      "color": "#34495e",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "mitre:legitimate_automation",
+      "label": "N/A - Legitimate Activity",
+      "kind": "MITRE",
+      "color": "#1abc9c",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "neighbor:system_monitoring",
+      "label": "system_monitoring",
+      "kind": "NEIGHBOR",
+      "color": "#95a5a6",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": 2,
+      "similarity": null
+    },
+    {
+      "id": "prompt",
+      "label": "PROMPT: write a C++ code to allocate m...",
+      "kind": "PROMPT",
+      "color": "#34495e",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "similarity:data_exfiltration",
+      "label": "data_exfiltration (-0.092)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0921,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.09207537770271301
+    },
+    {
+      "id": "similarity:privilege_escalation",
+      "label": "privilege_escalation (0.121)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.1207,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.1206764355301857
+    },
+    {
+      "id": "similarity:network_communication",
+      "label": "network_communication (-0.127)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.1271,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.1271148920059204
+    },
+    {
+      "id": "similarity:file_system_access",
+      "label": "file_system_access (-0.025)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0247,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.024661846458911896
+    },
+    {
+      "id": "similarity:process_execution",
+      "label": "process_execution (-0.010)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.01,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.009970156475901604
+    },
+    {
+      "id": "similarity:code_injection",
+      "label": "code_injection (0.208)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": 0.2084,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": 0.20837153494358063
+    },
+    {
+      "id": "similarity:reconnaissance",
+      "label": "reconnaissance (-0.035)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0351,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.035099975764751434
+    },
+    {
+      "id": "similarity:legitimate_automation",
+      "label": "legitimate_automation (-0.059)",
+      "kind": "SIMILARITY",
+      "color": "#e74c3c",
+      "value": -0.0589,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.058868296444416046
+    },
+    {
+      "id": "similarity:system_monitoring",
+      "label": "system_monitoring (-0.077)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.077,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.07702361792325974
+    },
+    {
+      "id": "similarity:unknown",
+      "label": "unknown (-0.052)",
+      "kind": "SIMILARITY",
+      "color": "#16a085",
+      "value": -0.0521,
+      "provenance": null,
+      "semantic_category": null,
+      "severity": null,
+      "similarity": -0.052134569734334946
+    },
+    {
+      "id": "feature:severity",
+      "label": "severity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "risk_score",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:risk_score",
+      "label": "risk_score: 0.10",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.1,
+      "provenance": null,
+      "semantic_category": "risk_score",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_ip",
+      "label": "has_ip: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_url",
+      "label": "has_url: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:has_filepath",
+      "label": "has_filepath: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "entity_presence",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:threat_amplifiers",
+      "label": "threat_amplifiers: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:action_verb_density",
+      "label": "action_verb_density: 0.20",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.2,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:target_density",
+      "label": "target_density: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:temporal_signal",
+      "label": "temporal_signal: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:is_compound",
+      "label": "is_compound: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:complexity",
+      "label": "complexity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:multi_target",
+      "label": "multi_target: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:svo_density",
+      "label": "svo_density: 0.20",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.2,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:concept_density",
+      "label": "concept_density: 1.00",
+      "kind": "FEATURE",
+      "color": "#e74c3c",
+      "value": 1.0,
+      "provenance": null,
+      "semantic_category": "structural",
+      "severity": null,
+      "similarity": null
+    },
+    {
+      "id": "feature:sensitivity",
+      "label": "sensitivity: 0.00",
+      "kind": "FEATURE",
+      "color": "#2ecc71",
+      "value": 0.0,
+      "provenance": null,
+      "semantic_category": "behavioral",
+      "severity": null,
+      "similarity": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "intent:legitimate_automation",
+      "target": "role:agent",
+      "type": "has_role",
+      "label": "has_role",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "role:goal",
+      "type": "achieves",
+      "label": "achieves",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:task_scheduling",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:automation",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:maintenance",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:backup",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:deployment",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:workflow",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:productivity",
+      "type": "has_concept",
+      "label": "has_concept",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "entity:verb:write",
+      "type": "expressed_by",
+      "label": "expressed_by",
+      "weight": 0.7
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:typical_cron",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:typical_schedule",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "concept:typical_backup",
+      "type": "targets",
+      "label": "targets",
+      "weight": 0.5
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "mitre:legitimate_automation",
+      "type": "mapped_to",
+      "label": "mapped_to",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "neighbor:system_monitoring",
+      "type": "related_to",
+      "label": "sibling",
+      "weight": 0.3
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "prompt",
+      "type": "related_to",
+      "label": "analyzed_as",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:severity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:risk_score",
+      "type": "has_feature",
+      "label": "0.10",
+      "weight": 0.1
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:has_ip",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:has_url",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:has_filepath",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:threat_amplifiers",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:action_verb_density",
+      "type": "has_feature",
+      "label": "0.20",
+      "weight": 0.2
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:target_density",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:temporal_signal",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:is_compound",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:complexity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:multi_target",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:svo_density",
+      "type": "has_feature",
+      "label": "0.20",
+      "weight": 0.2
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:concept_density",
+      "type": "has_feature",
+      "label": "1.00",
+      "weight": 1.0
+    },
+    {
+      "source": "intent:legitimate_automation",
+      "target": "feature:sensitivity",
+      "type": "has_feature",
+      "label": "0.00",
+      "weight": 0.01
+    },
+    {
+      "source": "role:agent",
+      "target": "role:action",
+      "type": "performs",
+      "label": "performs",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:target",
+      "type": "acts_on",
+      "label": "acts_on",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:method",
+      "type": "uses",
+      "label": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "role:action",
+      "target": "role:destination",
+      "type": "sends_to",
+      "label": "sends_to",
+      "weight": 1.0
+    },
+    {
+      "source": "role:target",
+      "target": "role:destination",
+      "type": "data_flow",
+      "label": "data_flow",
+      "weight": 1.0
+    },
+    {
+      "source": "ontology_root",
+      "target": "category:BENIGN",
+      "type": "has_category",
+      "label": "has_category",
+      "weight": 1.0
+    },
+    {
+      "source": "category:BENIGN",
+      "target": "intent:legitimate_automation",
+      "type": "contains",
+      "label": "contains",
+      "weight": 0.2
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:data_exfiltration",
+      "type": "similar_to",
+      "label": "-0.092",
+      "weight": -0.0921
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:privilege_escalation",
+      "type": "similar_to",
+      "label": "0.121",
+      "weight": 0.1207
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:network_communication",
+      "type": "similar_to",
+      "label": "-0.127",
+      "weight": -0.1271
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:file_system_access",
+      "type": "similar_to",
+      "label": "-0.025",
+      "weight": -0.0247
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:process_execution",
+      "type": "similar_to",
+      "label": "-0.010",
+      "weight": -0.01
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:code_injection",
+      "type": "similar_to",
+      "label": "0.208",
+      "weight": 0.2084
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:reconnaissance",
+      "type": "similar_to",
+      "label": "-0.035",
+      "weight": -0.0351
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:legitimate_automation",
+      "type": "similar_to",
+      "label": "-0.059",
+      "weight": -0.0589
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:system_monitoring",
+      "type": "similar_to",
+      "label": "-0.077",
+      "weight": -0.077
+    },
+    {
+      "source": "prompt",
+      "target": "similarity:unknown",
+      "type": "similar_to",
+      "label": "-0.052",
+      "weight": -0.0521
+    },
+    {
+      "source": "similarity:legitimate_automation",
+      "target": "intent:legitimate_automation",
+      "type": "related_to",
+      "label": "is_primary_intent",
+      "weight": 1.0
+    }
+  ],
+  "analysis": {
+    "node_count": 48,
+    "edge_count": 49,
+    "density": 0.0217,
+    "top_central_nodes": [
+      [
+        "intent:legitimate_automation",
+        0.7021276595744681
+      ],
+      [
+        "prompt",
+        0.23404255319148937
+      ],
+      [
+        "role:action",
+        0.0851063829787234
+      ],
+      [
+        "role:agent",
+        0.0425531914893617
+      ],
+      [
+        "role:target",
+        0.0425531914893617
+      ]
+    ],
+    "weakly_connected_components": 1
+  }
+}

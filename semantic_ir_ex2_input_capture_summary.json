@@ -1,0 +1,109 @@
+{
+  "total_nodes": 59,
+  "total_edges": 62,
+  "primary_intent": "input_capture",
+  "secondary_intents": [],
+  "risk_level": "CRITICAL",
+  "risk_score": 1.0,
+  "mitre_tactic": "TA0009 - Collection",
+  "mitre_technique": "T1056 - Input Capture",
+  "severity": 5,
+  "disambiguation": {
+    "method": "sbert",
+    "ranked_similarities": [
+      {
+        "label": "network_communication",
+        "similarity": 0.41
+      },
+      {
+        "label": "data_exfiltration",
+        "similarity": 0.3727
+      },
+      {
+        "label": "reconnaissance",
+        "similarity": 0.3695
+      },
+      {
+        "label": "database_access",
+        "similarity": 0.2202
+      },
+      {
+        "label": "file_system_access",
+        "similarity": 0.2104
+      },
+      {
+        "label": "memory_manipulation",
+        "similarity": 0.2044
+      },
+      {
+        "label": "defense_evasion",
+        "similarity": 0.1826
+      },
+      {
+        "label": "code_injection",
+        "similarity": 0.1785
+      },
+      {
+        "label": "process_execution",
+        "similarity": 0.1693
+      },
+      {
+        "label": "web_scraping",
+        "similarity": 0.169
+      },
+      {
+        "label": "system_monitoring",
+        "similarity": 0.1384
+      },
+      {
+        "label": "legitimate_automation",
+        "similarity": 0.1329
+      },
+      {
+        "label": "privilege_escalation",
+        "similarity": 0.1132
+      },
+      {
+        "label": "cryptographic_operation",
+        "similarity": 0.1101
+      },
+      {
+        "label": "input_capture",
+        "similarity": 0.1082
+      },
+      {
+        "label": "unknown",
+        "similarity": 0.0817
+      },
+      {
+        "label": "persistence",
+        "similarity": 0.0413
+      }
+    ],
+    "top_match": {
+      "label": "network_communication",
+      "similarity": 0.41
+    },
+    "agrees_with_classifier": false,
+    "margin_to_runner_up": 0.0373
+  },
+  "feature_vector": {
+    "severity": 1.0,
+    "risk_score": 1.0,
+    "has_ip": 1.0,
+    "has_url": 0.0,
+    "has_filepath": 1.0,
+    "threat_amplifiers": 0.0,
+    "action_verb_density": 0.6,
+    "target_density": 0.5,
+    "temporal_signal": 0.0,
+    "is_compound": 0.0,
+    "complexity": 0.0,
+    "multi_target": 1.0,
+    "svo_density": 0.4,
+    "concept_density": 1.0,
+    "sensitivity": 0.0
+  },
+  "classifier_conflict": false,
+  "conflict_detail": null
+}

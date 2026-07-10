@@ -1,0 +1,30 @@
+# Local LLM Models & Weights (CRITICAL: Prevents pushing 30GB+ of weights to Git)
+DeepSeek-Coder-V2-Lite-Instruct/
+offload/
+
+# Python compilation caches
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.pytest_cache/
+
+# Local pipeline execution outputs and generated images
+pipeline_output.json
+capability_graph.png
+semantic_ir_graph.png
+semantic_ir_*.png
+**/pipeline_output.json
+**/capability_graph.png
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# VS Code workspaces (Optional, keeping it clean)
+.vscode/

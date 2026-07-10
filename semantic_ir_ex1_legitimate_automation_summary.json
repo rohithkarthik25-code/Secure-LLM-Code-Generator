@@ -1,0 +1,118 @@
+{
+  "total_nodes": 60,
+  "total_edges": 61,
+  "primary_intent": "legitimate_automation",
+  "secondary_intents": [
+    {
+      "label": "input_capture",
+      "score": 0.416
+    },
+    {
+      "label": "general_coding",
+      "score": 0.335
+    }
+  ],
+  "risk_level": "MEDIUM",
+  "risk_score": 0.45,
+  "mitre_tactic": "N/A - Legitimate Activity",
+  "mitre_technique": "N/A",
+  "severity": 1,
+  "disambiguation": {
+    "method": "sbert",
+    "ranked_similarities": [
+      {
+        "label": "legitimate_automation",
+        "similarity": 0.6463
+      },
+      {
+        "label": "data_exfiltration",
+        "similarity": 0.316
+      },
+      {
+        "label": "cryptographic_operation",
+        "similarity": 0.2952
+      },
+      {
+        "label": "defense_evasion",
+        "similarity": 0.2913
+      },
+      {
+        "label": "file_system_access",
+        "similarity": 0.2857
+      },
+      {
+        "label": "system_monitoring",
+        "similarity": 0.2835
+      },
+      {
+        "label": "persistence",
+        "similarity": 0.2125
+      },
+      {
+        "label": "network_communication",
+        "similarity": 0.2124
+      },
+      {
+        "label": "process_execution",
+        "similarity": 0.2018
+      },
+      {
+        "label": "web_scraping",
+        "similarity": 0.1904
+      },
+      {
+        "label": "database_access",
+        "similarity": 0.158
+      },
+      {
+        "label": "input_capture",
+        "similarity": 0.152
+      },
+      {
+        "label": "reconnaissance",
+        "similarity": 0.1019
+      },
+      {
+        "label": "memory_manipulation",
+        "similarity": 0.053
+      },
+      {
+        "label": "code_injection",
+        "similarity": 0.0239
+      },
+      {
+        "label": "privilege_escalation",
+        "similarity": -0.0067
+      },
+      {
+        "label": "unknown",
+        "similarity": -0.0175
+      }
+    ],
+    "top_match": {
+      "label": "legitimate_automation",
+      "similarity": 0.6463
+    },
+    "agrees_with_classifier": true,
+    "margin_to_runner_up": 0.3303
+  },
+  "feature_vector": {
+    "severity": 0.0,
+    "risk_score": 0.45,
+    "has_ip": 0.0,
+    "has_url": 0.0,
+    "has_filepath": 0.0,
+    "threat_amplifiers": 0.0,
+    "action_verb_density": 0.2,
+    "target_density": 0.5,
+    "temporal_signal": 1.0,
+    "is_compound": 0.0,
+    "complexity": 0.0,
+    "multi_target": 1.0,
+    "svo_density": 0.6,
+    "concept_density": 0.9473684210526315,
+    "sensitivity": 0.0
+  },
+  "classifier_conflict": false,
+  "conflict_detail": null
+}

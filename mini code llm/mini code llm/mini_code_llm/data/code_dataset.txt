@@ -1,0 +1,971 @@
+Instruction: Write a function to add two numbers.
+
+Code:
+def add(a, b):
+    return a + b
+
+<END>
+
+Instruction: Write a function to subtract two numbers.
+
+Code:
+def subtract(a, b):
+    return a - b
+
+<END>
+
+Instruction: Write a function to multiply two numbers.
+
+Code:
+def multiply(a, b):
+    return a * b
+
+<END>
+
+Instruction: Write a function to divide two numbers.
+
+Code:
+def divide(a, b):
+    return a / b
+
+<END>
+
+Instruction: Write a function to calculate the factorial of a number.
+
+Code:
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+<END>
+
+Instruction: Write a function to check if a number is even.
+
+Code:
+def is_even(n):
+    return n % 2 == 0
+
+<END>
+
+Instruction: Write a function to check if a number is odd.
+
+Code:
+def is_odd(n):
+    return n % 2 != 0
+
+<END>
+
+Instruction: Write a function to square a number.
+
+Code:
+def square(n):
+    return n * n
+
+<END>
+
+Instruction: Write a function to cube a number.
+
+Code:
+def cube(n):
+    return n * n * n
+
+<END>
+
+Instruction: Write a function to calculate the power of a base to an exponent.
+
+Code:
+def power(base, exp):
+    return base ** exp
+
+<END>
+
+Instruction: Write a function to get the absolute value of a number.
+
+Code:
+def absolute(n):
+    return abs(n)
+
+<END>
+
+Instruction: Write a function to negate a number.
+
+Code:
+def negate(n):
+    return -n
+
+<END>
+
+Instruction: Write a function to find the maximum of two numbers.
+
+Code:
+def maximum(a, b):
+    return a if a > b else b
+
+<END>
+
+Instruction: Write a function to find the minimum of two numbers.
+
+Code:
+def minimum(a, b):
+    return a if a < b else b
+
+<END>
+
+Instruction: Write a function to calculate the average of a list.
+
+Code:
+def average(lst):
+    return sum(lst) / len(lst)
+
+<END>
+
+Instruction: Write a function to sum all elements in a list.
+
+Code:
+def total(lst):
+    return sum(lst)
+
+<END>
+
+Instruction: Write a function to get the length of a list.
+
+Code:
+def length(lst):
+    return len(lst)
+
+<END>
+
+Instruction: Write a function to reverse a list.
+
+Code:
+def reverse_list(lst):
+    return lst[::-1]
+
+<END>
+
+Instruction: Write a function to reverse a string.
+
+Code:
+def reverse_string(s):
+    return s[::-1]
+
+<END>
+
+Instruction: Write a function to check if a string is a palindrome.
+
+Code:
+def is_palindrome(s):
+    return s == s[::-1]
+
+<END>
+
+Instruction: Write a function to convert a string to uppercase.
+
+Code:
+def to_uppercase(s):
+    return s.upper()
+
+<END>
+
+Instruction: Write a function to convert a string to lowercase.
+
+Code:
+def to_lowercase(s):
+    return s.lower()
+
+<END>
+
+Instruction: Write a function to capitalize a string.
+
+Code:
+def capitalize_str(s):
+    return s.capitalize()
+
+<END>
+
+Instruction: Write a function to count characters in a string.
+
+Code:
+def count_chars(s):
+    return len(s)
+
+<END>
+
+Instruction: Write a function to count words in a string.
+
+Code:
+def count_words(s):
+    return len(s.split())
+
+<END>
+
+Instruction: Write a function to strip whitespace from a string.
+
+Code:
+def strip_spaces(s):
+    return s.strip()
+
+<END>
+
+Instruction: Write a function to replace characters in a string.
+
+Code:
+def replace_char(s, old, new):
+    return s.replace(old, new)
+
+<END>
+
+Instruction: Write a function to check if a string starts with a prefix.
+
+Code:
+def starts_with(s, prefix):
+    return s.startswith(prefix)
+
+<END>
+
+Instruction: Write a function to check if a string ends with a suffix.
+
+Code:
+def ends_with(s, suffix):
+    return s.endswith(suffix)
+
+<END>
+
+Instruction: Write a function to check if a string contains a substring.
+
+Code:
+def contains(s, sub):
+    return sub in s
+
+<END>
+
+Instruction: Write a function to split a string by a separator.
+
+Code:
+def split_string(s, sep):
+    return s.split(sep)
+
+<END>
+
+Instruction: Write a function to join a list of strings with a separator.
+
+Code:
+def join_list(lst, sep):
+    return sep.join(lst)
+
+<END>
+
+Instruction: Write a function to get the first element of a list.
+
+Code:
+def first_element(lst):
+    return lst[0]
+
+<END>
+
+Instruction: Write a function to get the last element of a list.
+
+Code:
+def last_element(lst):
+    return lst[-1]
+
+<END>
+
+Instruction: Write a function to get the second element of a list.
+
+Code:
+def second_element(lst):
+    return lst[1]
+
+<END>
+
+Instruction: Write a function to flatten a nested list.
+
+Code:
+def flatten(lst):
+    return [item for sublist in lst for item in sublist]
+
+<END>
+
+Instruction: Write a function to find the unique elements in a list.
+
+Code:
+def unique(lst):
+    return list(set(lst))
+
+<END>
+
+Instruction: Write a function to sort a list in ascending order.
+
+Code:
+def sort_list(lst):
+    return sorted(lst)
+
+<END>
+
+Instruction: Write a function to sort a list in descending order.
+
+Code:
+def sort_desc(lst):
+    return sorted(lst, reverse=True)
+
+<END>
+
+Instruction: Write a function to remove duplicates from a list preserving order.
+
+Code:
+def remove_duplicates(lst):
+    seen = []
+    for x in lst:
+        if x not in seen:
+            seen.append(x)
+    return seen
+
+<END>
+
+Instruction: Write a function to find the maximum value in a list.
+
+Code:
+def list_max(lst):
+    return max(lst)
+
+<END>
+
+Instruction: Write a function to find the minimum value in a list.
+
+Code:
+def list_min(lst):
+    return min(lst)
+
+<END>
+
+Instruction: Write a function to append an item to a list.
+
+Code:
+def append_item(lst, item):
+    lst.append(item)
+    return lst
+
+<END>
+
+Instruction: Write a function to remove an item from a list.
+
+Code:
+def remove_item(lst, item):
+    lst.remove(item)
+    return lst
+
+<END>
+
+Instruction: Write a function to count occurrences of an item in a list.
+
+Code:
+def count_occurrences(lst, item):
+    return lst.count(item)
+
+<END>
+
+Instruction: Write a function to find the index of an item in a list.
+
+Code:
+def index_of(lst, item):
+    return lst.index(item)
+
+<END>
+
+Instruction: Write a function to slice a list from a start index to an end index.
+
+Code:
+def slice_list(lst, start, end):
+    return lst[start:end]
+
+<END>
+
+Instruction: Write a function to merge two lists.
+
+Code:
+def merge_lists(a, b):
+    return a + b
+
+<END>
+
+Instruction: Write a function to zip two lists together.
+
+Code:
+def zip_lists(a, b):
+    return list(zip(a, b))
+
+<END>
+
+Instruction: Write a function to check if a list is empty.
+
+Code:
+def is_empty(lst):
+    return len(lst) == 0
+
+<END>
+
+Instruction: Write a function to clear all elements from a list.
+
+Code:
+def clear_list(lst):
+    return []
+
+<END>
+
+Instruction: Write a function to repeat a string n times.
+
+Code:
+def repeat_str(s, n):
+    return s * n
+
+<END>
+
+Instruction: Write a function to check if a string contains only digits.
+
+Code:
+def is_digit(s):
+    return s.isdigit()
+
+<END>
+
+Instruction: Write a function to check if a string contains only letters.
+
+Code:
+def is_alpha(s):
+    return s.isalpha()
+
+<END>
+
+Instruction: Write a function to check if a string is alphanumeric.
+
+Code:
+def is_alphanumeric(s):
+    return s.isalnum()
+
+<END>
+
+Instruction: Write a function to get the character at index i in a string.
+
+Code:
+def char_at(s, i):
+    return s[i]
+
+<END>
+
+Instruction: Write a function to find the index of a substring in a string.
+
+Code:
+def find_index(s, sub):
+    return s.find(sub)
+
+<END>
+
+Instruction: Write a function to count vowels in a string.
+
+Code:
+def count_vowels(s):
+    return sum(1 for c in s.lower() if c in 'aeiou')
+
+<END>
+
+Instruction: Write a function to count consonants in a string.
+
+Code:
+def count_consonants(s):
+    return sum(1 for c in s.lower() if c.isalpha() and c not in 'aeiou')
+
+<END>
+
+Instruction: Write a function to check if a number is positive.
+
+Code:
+def is_positive(n):
+    return n > 0
+
+<END>
+
+Instruction: Write a function to check if a number is negative.
+
+Code:
+def is_negative(n):
+    return n < 0
+
+<END>
+
+Instruction: Write a function to check if a number is zero.
+
+Code:
+def is_zero(n):
+    return n == 0
+
+<END>
+
+Instruction: Write a function to clamp a number between a lower and upper bound.
+
+Code:
+def clamp(n, lo, hi):
+    return max(lo, min(n, hi))
+
+<END>
+
+Instruction: Write a function to convert Celsius to Fahrenheit.
+
+Code:
+def celsius_to_fahrenheit(c):
+    return c * 9 / 5 + 32
+
+<END>
+
+Instruction: Write a function to convert Fahrenheit to Celsius.
+
+Code:
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5 / 9
+
+<END>
+
+Instruction: Write a function to convert kilometers to miles.
+
+Code:
+def km_to_miles(km):
+    return km * 0.621371
+
+<END>
+
+Instruction: Write a function to convert miles to kilometers.
+
+Code:
+def miles_to_km(miles):
+    return miles / 0.621371
+
+<END>
+
+Instruction: Write a function to check if a number is prime.
+
+Code:
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+<END>
+
+Instruction: Write a function to find the greatest common divisor (GCD) of two numbers.
+
+Code:
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+<END>
+
+Instruction: Write a function to find the least common multiple (LCM) of two numbers.
+
+Code:
+def lcm(a, b):
+    return abs(a * b) // gcd(a, b)
+
+<END>
+
+Instruction: Write a function to calculate the nth Fibonacci number.
+
+Code:
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+<END>
+
+Instruction: Write a function to calculate the sum of digits of a number.
+
+Code:
+def sum_digits(n):
+    return sum(int(d) for d in str(abs(n)))
+
+<END>
+
+Instruction: Write a function to count the number of digits in a number.
+
+Code:
+def count_digits(n):
+    return len(str(abs(n)))
+
+<END>
+
+Instruction: Write a function to check if a number is a perfect square.
+
+Code:
+def is_perfect_square(n):
+    return int(n**0.5) ** 2 == n
+
+<END>
+
+Instruction: Write a function to perform floor division.
+
+Code:
+def floor_div(a, b):
+    return a // b
+
+<END>
+
+Instruction: Write a function to calculate the modulo of two numbers.
+
+Code:
+def modulo(a, b):
+    return a % b
+
+<END>
+
+Instruction: Write a function to safely divide two numbers and return None if division by zero.
+
+Code:
+def safe_divide(a, b):
+    return a / b if b != 0 else None
+
+<END>
+
+Instruction: Write a function to swap two variables.
+
+Code:
+def swap(a, b):
+    return b, a
+
+<END>
+
+Instruction: Write a function to get the keys of a dictionary.
+
+Code:
+def dict_keys(d):
+    return list(d.keys())
+
+<END>
+
+Instruction: Write a function to get the values of a dictionary.
+
+Code:
+def dict_values(d):
+    return list(d.values())
+
+<END>
+
+Instruction: Write a function to get a value from a dictionary with a default fallback.
+
+Code:
+def dict_get(d, key, default=None):
+    return d.get(key, default)
+
+<END>
+
+Instruction: Write a function to check if a key exists in a dictionary.
+
+Code:
+def dict_has_key(d, key):
+    return key in d
+
+<END>
+
+Instruction: Write a function to merge two dictionaries.
+
+Code:
+def merge_dicts(d1, d2):
+    result = d1.copy()
+    result.update(d2)
+    return result
+
+<END>
+
+Instruction: Write a function to invert keys and values of a dictionary.
+
+Code:
+def invert_dict(d):
+    return {v: k for k, v in d.items()}
+
+<END>
+
+Instruction: Write a function to create a dictionary from lists of keys and values.
+
+Code:
+def list_to_dict(keys, values):
+    return dict(zip(keys, values))
+
+<END>
+
+Instruction: Write a function to convert a string to a list of characters.
+
+Code:
+def string_to_list(s):
+    return list(s)
+
+<END>
+
+Instruction: Write a function to convert an integer to its binary string representation.
+
+Code:
+def int_to_binary(n):
+    return bin(n)[2:]
+
+<END>
+
+Instruction: Write a function to convert a binary string to an integer.
+
+Code:
+def binary_to_int(b):
+    return int(b, 2)
+
+<END>
+
+Instruction: Write a function to convert an integer to its hexadecimal representation.
+
+Code:
+def int_to_hex(n):
+    return hex(n)[2:]
+
+<END>
+
+Instruction: Write a function to check if an object is a list.
+
+Code:
+def is_list(x):
+    return isinstance(x, list)
+
+<END>
+
+Instruction: Write a function to check if an object is a dictionary.
+
+Code:
+def is_dict(x):
+    return isinstance(x, dict)
+
+<END>
+
+Instruction: Write a function to check if an object is a string.
+
+Code:
+def is_string(x):
+    return isinstance(x, str)
+
+<END>
+
+Instruction: Write a function to check if an object is an integer.
+
+Code:
+def is_int(x):
+    return isinstance(x, int)
+
+<END>
+
+Instruction: Write a function to check if an object is a float.
+
+Code:
+def is_float(x):
+    return isinstance(x, float)
+
+<END>
+
+Instruction: Write a function to truncate a string to length n.
+
+Code:
+def truncate(s, n):
+    return s[:n]
+
+<END>
+
+Instruction: Write a function to pad a string on the left with a character to a width.
+
+Code:
+def pad_left(s, width, char=' '):
+    return s.rjust(width, char)
+
+<END>
+
+Instruction: Write a function to pad a string on the right with a character to a width.
+
+Code:
+def pad_right(s, width, char=' '):
+    return s.ljust(width, char)
+
+<END>
+
+Instruction: Write a function to convert a string to title case.
+
+Code:
+def title_case(s):
+    return s.title()
+
+<END>
+
+Instruction: Write a code snippet to print numbers 0–9.
+
+Code:
+for i in range(10):
+    print(i)
+
+<END>
+
+Instruction: Write a code snippet to check if a number is positive, negative, or zero.
+
+Code:
+x = 5
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+<END>
+
+Instruction: Write a code snippet to countdown using while loop.
+
+Code:
+n = 10
+while n > 0:
+    print(n)
+    n -= 1
+
+<END>
+
+Instruction: Write a code snippet to list comprehension — squares of even numbers.
+
+Code:
+squares = [x ** 2 for x in range(20) if x % 2 == 0]
+print(squares)
+
+<END>
+
+Instruction: Write a code snippet to sum of all elements in a list.
+
+Code:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+total = 0
+for num in numbers:
+    total += num
+print("Sum:", total)
+
+<END>
+
+Instruction: Write a code snippet to fizzbuzz.
+
+Code:
+for i in range(1, 31):
+    if i % 15 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+<END>
+
+Instruction: Write a code snippet to dictionary iteration.
+
+Code:
+person = {"name": "Alice", "age": 30, "city": "Paris"}
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+<END>
+
+Instruction: Write a code snippet to try/except for safe integer input.
+
+Code:
+try:
+    val = int("abc")
+except ValueError:
+    print("Not a valid integer")
+
+<END>
+
+Instruction: Write a code snippet to read and print lines from a file.
+
+Code:
+with open("sample.txt", "w") as f:
+    f.write("Hello\nWorld\nPython")
+with open("sample.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+<END>
+
+Instruction: Write a code snippet to lambda and map — double each element.
+
+Code:
+nums = [1, 2, 3, 4, 5]
+doubled = list(map(lambda x: x * 2, nums))
+print(doubled)
+
+<END>
+
+Instruction: Write a code snippet to filter — keep only positive numbers.
+
+Code:
+values = [-3, -1, 0, 2, 4, 7]
+positives = list(filter(lambda x: x > 0, values))
+print(positives)
+
+<END>
+
+Instruction: Write a code snippet to enumerate a list.
+
+Code:
+fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+<END>
+
+Instruction: Write a code snippet to nested list (2d grid) traversal.
+
+Code:
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for row in matrix:
+    for val in row:
+        print(val, end=" ")
+    print()
+
+<END>
+
+Instruction: Write a code snippet to count word frequency in a string.
+
+Code:
+sentence = "the cat sat on the mat the cat"
+freq = {}
+for word in sentence.split():
+    freq[word] = freq.get(word, 0) + 1
+print(freq)
+
+<END>
+
+Instruction: Write a code snippet to stack using a list.
+
+Code:
+stack = []
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print(stack.pop())
+print(stack.pop())
+
+<END>
+
+Instruction: Write a code snippet to queue using a list.
+
+Code:
+from collections import deque
+queue = deque()
+queue.append("a")
+queue.append("b")
+queue.append("c")
+print(queue.popleft())
+print(queue.popleft())
+
+<END>

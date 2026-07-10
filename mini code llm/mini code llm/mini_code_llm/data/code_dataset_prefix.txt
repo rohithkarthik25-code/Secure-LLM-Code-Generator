@@ -1,0 +1,420 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    return a / b
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+def is_even(n):
+    return n % 2 == 0
+
+def is_odd(n):
+    return n % 2 != 0
+
+def square(n):
+    return n * n
+
+def cube(n):
+    return n * n * n
+
+def power(base, exp):
+    return base ** exp
+
+def absolute(n):
+    return abs(n)
+
+def negate(n):
+    return -n
+
+def maximum(a, b):
+    return a if a > b else b
+
+def minimum(a, b):
+    return a if a < b else b
+
+def average(lst):
+    return sum(lst) / len(lst)
+
+def total(lst):
+    return sum(lst)
+
+def length(lst):
+    return len(lst)
+
+def reverse_list(lst):
+    return lst[::-1]
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    return s == s[::-1]
+
+def to_uppercase(s):
+    return s.upper()
+
+def to_lowercase(s):
+    return s.lower()
+
+def capitalize_str(s):
+    return s.capitalize()
+
+def count_chars(s):
+    return len(s)
+
+def count_words(s):
+    return len(s.split())
+
+def strip_spaces(s):
+    return s.strip()
+
+def replace_char(s, old, new):
+    return s.replace(old, new)
+
+def starts_with(s, prefix):
+    return s.startswith(prefix)
+
+def ends_with(s, suffix):
+    return s.endswith(suffix)
+
+def contains(s, sub):
+    return sub in s
+
+def split_string(s, sep):
+    return s.split(sep)
+
+def join_list(lst, sep):
+    return sep.join(lst)
+
+def first_element(lst):
+    return lst[0]
+
+def last_element(lst):
+    return lst[-1]
+
+def second_element(lst):
+    return lst[1]
+
+def flatten(lst):
+    return [item for sublist in lst for item in sublist]
+
+def unique(lst):
+    return list(set(lst))
+
+def sort_list(lst):
+    return sorted(lst)
+
+def sort_desc(lst):
+    return sorted(lst, reverse=True)
+
+def remove_duplicates(lst):
+    seen = []
+    for x in lst:
+        if x not in seen:
+            seen.append(x)
+    return seen
+
+def list_max(lst):
+    return max(lst)
+
+def list_min(lst):
+    return min(lst)
+
+def append_item(lst, item):
+    lst.append(item)
+    return lst
+
+def remove_item(lst, item):
+    lst.remove(item)
+    return lst
+
+def count_occurrences(lst, item):
+    return lst.count(item)
+
+def index_of(lst, item):
+    return lst.index(item)
+
+def slice_list(lst, start, end):
+    return lst[start:end]
+
+def merge_lists(a, b):
+    return a + b
+
+def zip_lists(a, b):
+    return list(zip(a, b))
+
+def is_empty(lst):
+    return len(lst) == 0
+
+def clear_list(lst):
+    return []
+
+def repeat_str(s, n):
+    return s * n
+
+def is_digit(s):
+    return s.isdigit()
+
+def is_alpha(s):
+    return s.isalpha()
+
+def is_alphanumeric(s):
+    return s.isalnum()
+
+def char_at(s, i):
+    return s[i]
+
+def find_index(s, sub):
+    return s.find(sub)
+
+def count_vowels(s):
+    return sum(1 for c in s.lower() if c in 'aeiou')
+
+def count_consonants(s):
+    return sum(1 for c in s.lower() if c.isalpha() and c not in 'aeiou')
+
+def is_positive(n):
+    return n > 0
+
+def is_negative(n):
+    return n < 0
+
+def is_zero(n):
+    return n == 0
+
+def clamp(n, lo, hi):
+    return max(lo, min(n, hi))
+
+def celsius_to_fahrenheit(c):
+    return c * 9 / 5 + 32
+
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5 / 9
+
+def km_to_miles(km):
+    return km * 0.621371
+
+def miles_to_km(miles):
+    return miles / 0.621371
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return abs(a * b) // gcd(a, b)
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+def sum_digits(n):
+    return sum(int(d) for d in str(abs(n)))
+
+def count_digits(n):
+    return len(str(abs(n)))
+
+def is_perfect_square(n):
+    return int(n**0.5) ** 2 == n
+
+def floor_div(a, b):
+    return a // b
+
+def modulo(a, b):
+    return a % b
+
+def safe_divide(a, b):
+    return a / b if b != 0 else None
+
+def swap(a, b):
+    return b, a
+
+def dict_keys(d):
+    return list(d.keys())
+
+def dict_values(d):
+    return list(d.values())
+
+def dict_get(d, key, default=None):
+    return d.get(key, default)
+
+def dict_has_key(d, key):
+    return key in d
+
+def merge_dicts(d1, d2):
+    result = d1.copy()
+    result.update(d2)
+    return result
+
+def invert_dict(d):
+    return {v: k for k, v in d.items()}
+
+def list_to_dict(keys, values):
+    return dict(zip(keys, values))
+
+def string_to_list(s):
+    return list(s)
+
+def int_to_binary(n):
+    return bin(n)[2:]
+
+def binary_to_int(b):
+    return int(b, 2)
+
+def int_to_hex(n):
+    return hex(n)[2:]
+
+def is_list(x):
+    return isinstance(x, list)
+
+def is_dict(x):
+    return isinstance(x, dict)
+
+def is_string(x):
+    return isinstance(x, str)
+
+def is_int(x):
+    return isinstance(x, int)
+
+def is_float(x):
+    return isinstance(x, float)
+
+def truncate(s, n):
+    return s[:n]
+
+def pad_left(s, width, char=' '):
+    return s.rjust(width, char)
+
+def pad_right(s, width, char=' '):
+    return s.ljust(width, char)
+
+def title_case(s):
+    return s.title()
+
+
+# --- Standalone Code Snippets ---
+
+# Snippet 1: Print numbers 0–9
+for i in range(10):
+    print(i)
+
+# Snippet 2: Check if a number is positive, negative, or zero
+x = 5
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+# Snippet 3: Countdown using while loop
+n = 10
+while n > 0:
+    print(n)
+    n -= 1
+
+# Snippet 4: List comprehension — squares of even numbers
+squares = [x ** 2 for x in range(20) if x % 2 == 0]
+print(squares)
+
+# Snippet 5: Sum of all elements in a list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+total = 0
+for num in numbers:
+    total += num
+print("Sum:", total)
+
+# Snippet 6: FizzBuzz
+for i in range(1, 31):
+    if i % 15 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+# Snippet 7: Dictionary iteration
+person = {"name": "Alice", "age": 30, "city": "Paris"}
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+# Snippet 8: Try/except for safe integer input
+try:
+    val = int("abc")
+except ValueError:
+    print("Not a valid integer")
+
+# Snippet 9: Read and print lines from a file
+with open("sample.txt", "w") as f:
+    f.write("Hello\nWorld\nPython")
+with open("sample.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+# Snippet 10: Lambda and map — double each element
+nums = [1, 2, 3, 4, 5]
+doubled = list(map(lambda x: x * 2, nums))
+print(doubled)
+
+# Snippet 11: Filter — keep only positive numbers
+values = [-3, -1, 0, 2, 4, 7]
+positives = list(filter(lambda x: x > 0, values))
+print(positives)
+
+# Snippet 12: Enumerate a list
+fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+# Snippet 13: Nested list (2D grid) traversal
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for row in matrix:
+    for val in row:
+        print(val, end=" ")
+    print()
+
+# Snippet 14: Count word frequency in a string
+sentence = "the cat sat on the mat the cat"
+freq = {}
+for word in sentence.split():
+    freq[word] = freq.get(word, 0) + 1
+print(freq)
+
+# Snippet 15: Stack using a list
+stack = []
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print(stack.pop())
+print(stack.pop())
+
+# Snippet 16: Queue using a list
+from collections import deque
+queue = deque()
+queue.append("a")
+queue.append("b")
+queue.append("c")
+print(queue.popleft())
+print(queue.popleft())

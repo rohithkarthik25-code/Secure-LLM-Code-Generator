@@ -26,9 +26,40 @@ class MockBehavioralInstabilityEngine:
         has_file_write = "open(" in code_lower and ("'w'" in code_lower or '"w"' in code_lower or "'a'" in code_lower or '"a"' in code_lower or "'wb'" in code_lower or '"wb"' in code_lower)
         has_socket = "socket" in code_lower and "connect" in code_lower
         
+        # ── Taint Analysis / Data Flow Tracking Mock ─────────────────
+        import re
+        # Find variables assigned from read operations: var_name = f.read() or open().read()
+        read_pattern = re.compile(r"\b(\w+)\s*=\s*(?:\w+\.)?read\s*\(")
+        read_vars = set(read_pattern.findall(generated_code))
+        
+        # Fallback to common data variables if 'read' keyword is seen
+        if "read" in code_lower or "readline" in code_lower:
+            read_vars.update({"data", "content", "payload", "lines", "text", "file_data"})
+            
+        exfil_detected = False
+        exfil_var = None
+        
+        for var in read_vars:
+            if not var or var in ("self", "args", "kwargs"):
+                continue
+            # Regex to detect if the tainted variable is passed to socket.send()
+            socket_send_pat = re.compile(rf"socket\s*\.\s*send(?:all)?\s*\(\s*.*?\b{var}\b")
+            # Regex to detect if the tainted variable is passed to requests.post/get/put/request
+            requests_send_pat = re.compile(rf"requests\s*\.\s*(?:post|get|put|request)\s*\(\s*.*?\b(?:data|json|files|params)\s*=\s*.*?\b{var}\b")
+            # Regex to detect if the tainted variable is passed to urllib urlopen
+            urlopen_send_pat = re.compile(rf"urllib\s*\.\s*request\s*\.\s*urlopen\s*\(\s*.*?\b{var}\b")
+            
+            if (socket_send_pat.search(generated_code) or 
+                requests_send_pat.search(generated_code) or 
+                urlopen_send_pat.search(generated_code)):
+                exfil_detected = True
+                exfil_var = var
+                break
+        # ─────────────────────────────────────────────────────────────
+        
         # 3. Check for specific dangerous functional capabilities
         has_ransomware = "RansomwareBehavior" in actual
-        has_data_exfil = "DataExfiltration" in actual
+        has_data_exfil = "DataExfiltration" in actual or exfil_detected
         
         status = "STABLE"
         reason = "Code behavior matches intent expectations."
@@ -40,7 +71,10 @@ class MockBehavioralInstabilityEngine:
             severity = "CRITICAL"
         elif has_data_exfil and "DataExfiltration" not in expected:
             status = "UNSTABLE"
-            reason = "Detected unexpected functional capability: DataExfiltration (data is being read and sent over the network)."
+            if exfil_detected:
+                reason = f"Detected unauthorized Taint Data Flow: Variable '{exfil_var}' containing file read data is being transmitted directly over the network."
+            else:
+                reason = "Detected unexpected functional capability: DataExfiltration (data is being read and sent over the network)."
             severity = "CRITICAL"
         elif unexpected_caps:
             status = "UNSTABLE"

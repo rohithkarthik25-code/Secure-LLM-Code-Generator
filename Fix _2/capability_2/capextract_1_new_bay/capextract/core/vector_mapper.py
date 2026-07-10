@@ -209,6 +209,6 @@ class VectorMapper:
         # of the top score. This perfectly groups highly-correlated capabilities 
         # (e.g. HTTP_REQUEST and SOCKET_OPEN) while dropping the noisy tails.
         best_score = matches[0][1]
-        optimal_matches = [m for m in matches if (best_score - m[1]) <= 0.10]
+        optimal_matches = [m for m in matches if (best_score - m[1]) <= 0.008]
         
         return optimal_matches

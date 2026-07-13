@@ -1,0 +1,1167 @@
+{
+  "pipeline_version": "2.0",
+  "timestamp": "2026-07-13T05:12:09.711848Z",
+  "elapsed_seconds": 186.3,
+  "prompt": "Write a python function to add two numbers, but write the sum to a file named 'results.txt'.",
+  "intent_ir": {
+    "primary_intent": "unknown",
+    "secondary_intents": [],
+    "risk_level": "LOW",
+    "risk_score": 0.3,
+    "mitre_tactic": "N/A - Unclassified",
+    "mitre_technique": "N/A",
+    "severity": 1,
+    "entities": {
+      "ip_address": [],
+      "url": [],
+      "file_path": [],
+      "port_mention": [],
+      "time_mention": [],
+      "tech_tool": [
+        "python"
+      ],
+      "threat_amplifiers": [],
+      "target_categories": {
+        "file_system": [
+          "file"
+        ],
+        "general_coding": [
+          "function"
+        ]
+      },
+      "primary_target": "file_system",
+      "secondary_targets": [
+        "general_coding"
+      ],
+      "temporal_context": []
+    },
+    "behavioral_summary": "The prompt uses action verbs [write] targeting [file_system, general_coding]. Classified as [UNKNOWN] with risk level [LOW].",
+    "intent_classification": {
+      "primary_intent": "unknown",
+      "intent_scores": [
+        {
+          "label": "unknown",
+          "score": 0.484
+        },
+        {
+          "label": "general_coding",
+          "score": 0.098
+        },
+        {
+          "label": "input_capture",
+          "score": 0.078
+        },
+        {
+          "label": "file_system_access",
+          "score": 0.062
+        }
+      ],
+      "secondary_intents": [],
+      "rule_based_results": [
+        {
+          "label": "unknown",
+          "score": 1.0,
+          "method": "rule_based"
+        }
+      ],
+      "llm_results": [
+        {
+          "label": "unknown",
+          "score": 0.403,
+          "method": "zero_shot_llm"
+        },
+        {
+          "label": "general_coding",
+          "score": 0.098,
+          "method": "zero_shot_llm"
+        },
+        {
+          "label": "input_capture",
+          "score": 0.078,
+          "method": "zero_shot_llm"
+        }
+      ],
+      "method": "hybrid",
+      "classifier_conflict": false,
+      "conflict_detail": null
+    },
+    "risk_assessment": {
+      "risk_score": 0.3,
+      "risk_level": "LOW",
+      "score_breakdown": {
+        "base_from_intent": 0.2,
+        "total_boost": 0.1,
+        "boost_reasons": [
+          "+0.10 multi-target prompt"
+        ]
+      }
+    },
+    "disambiguation": {
+      "method": "sbert",
+      "ranked_similarities": [
+        {
+          "label": "data_exfiltration",
+          "similarity": 0.1251
+        },
+        {
+          "label": "network_communication",
+          "similarity": 0.1244
+        },
+        {
+          "label": "file_system_access",
+          "similarity": 0.1079
+        },
+        {
+          "label": "system_monitoring",
+          "similarity": 0.1063
+        },
+        {
+          "label": "process_execution",
+          "similarity": 0.0832
+        },
+        {
+          "label": "web_scraping",
+          "similarity": 0.068
+        },
+        {
+          "label": "reconnaissance",
+          "similarity": 0.057
+        },
+        {
+          "label": "legitimate_automation",
+          "similarity": 0.0529
+        },
+        {
+          "label": "cryptographic_operation",
+          "similarity": 0.0507
+        },
+        {
+          "label": "memory_manipulation",
+          "similarity": 0.0503
+        },
+        {
+          "label": "database_access",
+          "similarity": 0.0341
+        },
+        {
+          "label": "code_injection",
+          "similarity": 0.0282
+        },
+        {
+          "label": "defense_evasion",
+          "similarity": -0.0129
+        },
+        {
+          "label": "unknown",
+          "similarity": -0.0175
+        },
+        {
+          "label": "privilege_escalation",
+          "similarity": -0.0222
+        },
+        {
+          "label": "input_capture",
+          "similarity": -0.0393
+        },
+        {
+          "label": "persistence",
+          "similarity": -0.1148
+        }
+      ],
+      "top_match": {
+        "label": "data_exfiltration",
+        "similarity": 0.1251
+      },
+      "agrees_with_classifier": false,
+      "margin_to_runner_up": 0.0007
+    },
+    "feature_vector": {
+      "severity": 0.0,
+      "risk_score": 0.3,
+      "has_ip": 0.0,
+      "has_url": 0.0,
+      "has_filepath": 0.0,
+      "threat_amplifiers": 0.0,
+      "action_verb_density": 0.2,
+      "target_density": 0.3333333333333333,
+      "temporal_signal": 0.0,
+      "is_compound": 0.0,
+      "complexity": 0.0,
+      "multi_target": 1.0,
+      "svo_density": 0.2,
+      "concept_density": 0.8235294117647058,
+      "sensitivity": 0.0
+    },
+    "ir_graph": {
+      "node_count": 48,
+      "edge_count": 49,
+      "nodes": [
+        {
+          "id": "intent:unknown",
+          "label": "UNKNOWN",
+          "kind": "INTENT",
+          "color": "#e74c3c",
+          "value": 1.0,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": 1,
+          "similarity": null
+        },
+        {
+          "id": "role:agent",
+          "label": "AGENT: Python script",
+          "kind": "ROLE",
+          "color": "#3498db",
+          "value": 1.0,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "role:action",
+          "label": "ACTION: write",
+          "kind": "ACTION",
+          "color": "#2ecc71",
+          "value": 1.0,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "role:target",
+          "label": "TARGET: file_system",
+          "kind": "TARGET",
+          "color": "#f39c12",
+          "value": 1.0,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "role:method",
+          "label": "METHOD: python",
+          "kind": "METHOD",
+          "color": "#3498db",
+          "value": 1.0,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "role:destination",
+          "label": "DESTINATION: unknown",
+          "kind": "DESTINATION",
+          "color": "#e74c3c",
+          "value": 0.4,
+          "provenance": "inferred_from_ontology_template",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "role:goal",
+          "label": "GOAL: function",
+          "kind": "GOAL",
+          "color": "#9b59b6",
+          "value": 1.0,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "concept:ambiguous",
+          "label": "ambiguous",
+          "kind": "CONCEPT",
+          "color": "#9b59b6",
+          "value": 0.5,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "concept:insufficient_context",
+          "label": "insufficient context",
+          "kind": "CONCEPT",
+          "color": "#9b59b6",
+          "value": 0.5,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "concept:unclear_intent",
+          "label": "unclear intent",
+          "kind": "CONCEPT",
+          "color": "#9b59b6",
+          "value": 0.5,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "entity:verb:write",
+          "label": "verb: write",
+          "kind": "ACTION",
+          "color": "#2ecc71",
+          "value": 0.7,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "entity:tool:python",
+          "label": "tool: python",
+          "kind": "ENTITY",
+          "color": "#e67e22",
+          "value": 0.6,
+          "provenance": "extracted_from_prompt",
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "ontology_root",
+          "label": "INTENT ROOT",
+          "kind": "ONTOLOGY_ROOT",
+          "color": "#2c3e50",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "category:UNKNOWN",
+          "label": "UNKNOWN",
+          "kind": "CATEGORY",
+          "color": "#34495e",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "mitre:unknown",
+          "label": "N/A - Unclassified",
+          "kind": "MITRE",
+          "color": "#1abc9c",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "prompt",
+          "label": "PROMPT: Write a python function to add...",
+          "kind": "PROMPT",
+          "color": "#34495e",
+          "value": 1.0,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "similarity:data_exfiltration",
+          "label": "data_exfiltration (0.125)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.1251,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.1251382976770401
+        },
+        {
+          "id": "similarity:privilege_escalation",
+          "label": "privilege_escalation (-0.022)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": -0.0222,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": -0.022167526185512543
+        },
+        {
+          "id": "similarity:network_communication",
+          "label": "network_communication (0.124)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.1244,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.12441225349903107
+        },
+        {
+          "id": "similarity:file_system_access",
+          "label": "file_system_access (0.108)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.1079,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.10786207765340805
+        },
+        {
+          "id": "similarity:process_execution",
+          "label": "process_execution (0.083)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.0832,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.08316166698932648
+        },
+        {
+          "id": "similarity:code_injection",
+          "label": "code_injection (0.028)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.0282,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.028226910158991814
+        },
+        {
+          "id": "similarity:reconnaissance",
+          "label": "reconnaissance (0.057)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.057,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.05696366727352142
+        },
+        {
+          "id": "similarity:legitimate_automation",
+          "label": "legitimate_automation (0.053)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.0529,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.05288650467991829
+        },
+        {
+          "id": "similarity:system_monitoring",
+          "label": "system_monitoring (0.106)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.1063,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.10630293935537338
+        },
+        {
+          "id": "similarity:unknown",
+          "label": "unknown (-0.018)",
+          "kind": "SIMILARITY",
+          "color": "#e74c3c",
+          "value": -0.0175,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": -0.017543531954288483
+        },
+        {
+          "id": "similarity:input_capture",
+          "label": "input_capture (-0.039)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": -0.0393,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": -0.03925280272960663
+        },
+        {
+          "id": "similarity:persistence",
+          "label": "persistence (-0.115)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": -0.1148,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": -0.11480280756950378
+        },
+        {
+          "id": "similarity:defense_evasion",
+          "label": "defense_evasion (-0.013)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": -0.0129,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": -0.012934720143675804
+        },
+        {
+          "id": "similarity:database_access",
+          "label": "database_access (0.034)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.0341,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.034068163484334946
+        },
+        {
+          "id": "similarity:memory_manipulation",
+          "label": "memory_manipulation (0.050)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.0503,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.05032585561275482
+        },
+        {
+          "id": "similarity:cryptographic_operation",
+          "label": "cryptographic_operation (0.051)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.0507,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.050736624747514725
+        },
+        {
+          "id": "similarity:web_scraping",
+          "label": "web_scraping (0.068)",
+          "kind": "SIMILARITY",
+          "color": "#16a085",
+          "value": 0.068,
+          "provenance": null,
+          "semantic_category": null,
+          "severity": null,
+          "similarity": 0.06796009093523026
+        },
+        {
+          "id": "feature:severity",
+          "label": "severity: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "risk_score",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:risk_score",
+          "label": "risk_score: 0.30",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.3,
+          "provenance": null,
+          "semantic_category": "risk_score",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:has_ip",
+          "label": "has_ip: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "entity_presence",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:has_url",
+          "label": "has_url: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "entity_presence",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:has_filepath",
+          "label": "has_filepath: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "entity_presence",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:threat_amplifiers",
+          "label": "threat_amplifiers: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "behavioral",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:action_verb_density",
+          "label": "action_verb_density: 0.20",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.2,
+          "provenance": null,
+          "semantic_category": "behavioral",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:target_density",
+          "label": "target_density: 0.33",
+          "kind": "FEATURE",
+          "color": "#f39c12",
+          "value": 0.3333,
+          "provenance": null,
+          "semantic_category": "behavioral",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:temporal_signal",
+          "label": "temporal_signal: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "structural",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:is_compound",
+          "label": "is_compound: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "structural",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:complexity",
+          "label": "complexity: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "structural",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:multi_target",
+          "label": "multi_target: 1.00",
+          "kind": "FEATURE",
+          "color": "#e74c3c",
+          "value": 1.0,
+          "provenance": null,
+          "semantic_category": "structural",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:svo_density",
+          "label": "svo_density: 0.20",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.2,
+          "provenance": null,
+          "semantic_category": "behavioral",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:concept_density",
+          "label": "concept_density: 0.82",
+          "kind": "FEATURE",
+          "color": "#e74c3c",
+          "value": 0.8235,
+          "provenance": null,
+          "semantic_category": "structural",
+          "severity": null,
+          "similarity": null
+        },
+        {
+          "id": "feature:sensitivity",
+          "label": "sensitivity: 0.00",
+          "kind": "FEATURE",
+          "color": "#2ecc71",
+          "value": 0.0,
+          "provenance": null,
+          "semantic_category": "behavioral",
+          "severity": null,
+          "similarity": null
+        }
+      ],
+      "edges": [
+        {
+          "source": "intent:unknown",
+          "target": "role:agent",
+          "type": "has_role",
+          "label": "has_role",
+          "weight": 1.0
+        },
+        {
+          "source": "intent:unknown",
+          "target": "role:goal",
+          "type": "achieves",
+          "label": "achieves",
+          "weight": 1.0
+        },
+        {
+          "source": "intent:unknown",
+          "target": "concept:ambiguous",
+          "type": "has_concept",
+          "label": "has_concept",
+          "weight": 0.5
+        },
+        {
+          "source": "intent:unknown",
+          "target": "concept:insufficient_context",
+          "type": "has_concept",
+          "label": "has_concept",
+          "weight": 0.5
+        },
+        {
+          "source": "intent:unknown",
+          "target": "concept:unclear_intent",
+          "type": "has_concept",
+          "label": "has_concept",
+          "weight": 0.5
+        },
+        {
+          "source": "intent:unknown",
+          "target": "entity:verb:write",
+          "type": "expressed_by",
+          "label": "expressed_by",
+          "weight": 0.7
+        },
+        {
+          "source": "intent:unknown",
+          "target": "entity:tool:python",
+          "type": "uses_tool",
+          "label": "uses_tool",
+          "weight": 0.6
+        },
+        {
+          "source": "intent:unknown",
+          "target": "mitre:unknown",
+          "type": "mapped_to",
+          "label": "mapped_to",
+          "weight": 1.0
+        },
+        {
+          "source": "intent:unknown",
+          "target": "prompt",
+          "type": "related_to",
+          "label": "analyzed_as",
+          "weight": 1.0
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:severity",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:risk_score",
+          "type": "has_feature",
+          "label": "0.30",
+          "weight": 0.3
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:has_ip",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:has_url",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:has_filepath",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:threat_amplifiers",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:action_verb_density",
+          "type": "has_feature",
+          "label": "0.20",
+          "weight": 0.2
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:target_density",
+          "type": "has_feature",
+          "label": "0.33",
+          "weight": 0.3333
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:temporal_signal",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:is_compound",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:complexity",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:multi_target",
+          "type": "has_feature",
+          "label": "1.00",
+          "weight": 1.0
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:svo_density",
+          "type": "has_feature",
+          "label": "0.20",
+          "weight": 0.2
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:concept_density",
+          "type": "has_feature",
+          "label": "0.82",
+          "weight": 0.8235
+        },
+        {
+          "source": "intent:unknown",
+          "target": "feature:sensitivity",
+          "type": "has_feature",
+          "label": "0.00",
+          "weight": 0.01
+        },
+        {
+          "source": "role:agent",
+          "target": "role:action",
+          "type": "performs",
+          "label": "performs",
+          "weight": 1.0
+        },
+        {
+          "source": "role:action",
+          "target": "role:target",
+          "type": "acts_on",
+          "label": "acts_on",
+          "weight": 1.0
+        },
+        {
+          "source": "role:action",
+          "target": "role:method",
+          "type": "uses",
+          "label": "uses",
+          "weight": 1.0
+        },
+        {
+          "source": "role:action",
+          "target": "role:destination",
+          "type": "sends_to",
+          "label": "sends_to",
+          "weight": 1.0
+        },
+        {
+          "source": "role:target",
+          "target": "role:destination",
+          "type": "data_flow",
+          "label": "data_flow",
+          "weight": 1.0
+        },
+        {
+          "source": "ontology_root",
+          "target": "category:UNKNOWN",
+          "type": "has_category",
+          "label": "has_category",
+          "weight": 1.0
+        },
+        {
+          "source": "category:UNKNOWN",
+          "target": "intent:unknown",
+          "type": "contains",
+          "label": "contains",
+          "weight": 0.2
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:data_exfiltration",
+          "type": "similar_to",
+          "label": "0.125",
+          "weight": 0.1251
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:privilege_escalation",
+          "type": "similar_to",
+          "label": "-0.022",
+          "weight": -0.0222
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:network_communication",
+          "type": "similar_to",
+          "label": "0.124",
+          "weight": 0.1244
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:file_system_access",
+          "type": "similar_to",
+          "label": "0.108",
+          "weight": 0.1079
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:process_execution",
+          "type": "similar_to",
+          "label": "0.083",
+          "weight": 0.0832
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:code_injection",
+          "type": "similar_to",
+          "label": "0.028",
+          "weight": 0.0282
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:reconnaissance",
+          "type": "similar_to",
+          "label": "0.057",
+          "weight": 0.057
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:legitimate_automation",
+          "type": "similar_to",
+          "label": "0.053",
+          "weight": 0.0529
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:system_monitoring",
+          "type": "similar_to",
+          "label": "0.106",
+          "weight": 0.1063
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:unknown",
+          "type": "similar_to",
+          "label": "-0.018",
+          "weight": -0.0175
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:input_capture",
+          "type": "similar_to",
+          "label": "-0.039",
+          "weight": -0.0393
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:persistence",
+          "type": "similar_to",
+          "label": "-0.115",
+          "weight": -0.1148
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:defense_evasion",
+          "type": "similar_to",
+          "label": "-0.013",
+          "weight": -0.0129
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:database_access",
+          "type": "similar_to",
+          "label": "0.034",
+          "weight": 0.0341
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:memory_manipulation",
+          "type": "similar_to",
+          "label": "0.050",
+          "weight": 0.0503
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:cryptographic_operation",
+          "type": "similar_to",
+          "label": "0.051",
+          "weight": 0.0507
+        },
+        {
+          "source": "prompt",
+          "target": "similarity:web_scraping",
+          "type": "similar_to",
+          "label": "0.068",
+          "weight": 0.068
+        },
+        {
+          "source": "similarity:unknown",
+          "target": "intent:unknown",
+          "type": "related_to",
+          "label": "is_primary_intent",
+          "weight": 1.0
+        }
+      ],
+      "analysis": {
+        "node_count": 48,
+        "edge_count": 49,
+        "density": 0.0217,
+        "top_central_nodes": [
+          [
+            "intent:unknown",
+            0.5531914893617021
+          ],
+          [
+            "prompt",
+            0.3829787234042553
+          ],
+          [
+            "role:action",
+            0.0851063829787234
+          ],
+          [
+            "role:agent",
+            0.0425531914893617
+          ],
+          [
+            "role:target",
+            0.0425531914893617
+          ]
+        ],
+        "weakly_connected_components": 1
+      }
+    }
+  },
+  "capability_ir": {
+    "language": "python",
+    "intent": {
+      "goal": "The prompt uses action verbs [write] targeting [file_system, general_coding]. Classified as [UNKNOWN] with risk level [LOW].",
+      "expected_capabilities": [],
+      "scope_constraints": [],
+      "detected_language": "python",
+      "upstream_primary_intent": "unknown",
+      "upstream_risk_level": "LOW",
+      "upstream_risk_score": 0.3
+    },
+    "primitive_capabilities": [
+      "NATURAL_LANGUAGE"
+    ],
+    "functional_capabilities": [],
+    "risk_flags": [],
+    "unclassified_signals": [],
+    "nodes": [
+      {
+        "id": "605ec111",
+        "type": "intent",
+        "label": "The prompt uses action verbs [write] targeting [file_system, general_coding]. Cl",
+        "confidence": 1.0,
+        "bayesian_score": null,
+        "evidence_score": null,
+        "source_line": null,
+        "metadata": {
+          "expected_caps": [],
+          "scope_constraints": [],
+          "resource_hints": [
+            "python",
+            "file_system",
+            "general_coding"
+          ]
+        }
+      },
+      {
+        "id": "c51c7432",
+        "type": "primitive",
+        "label": "NATURAL_LANGUAGE",
+        "confidence": 1.0,
+        "bayesian_score": null,
+        "evidence_score": null,
+        "source_line": 1,
+        "metadata": {
+          "trigger": "natural_language_text",
+          "high_risk": false
+        }
+      }
+    ],
+    "edges": []
+  },
+  "cross_layer_analysis": {
+    "intent_risk_score": 0.3,
+    "capability_risk_score": 0.0,
+    "combined_risk_score": 0.3,
+    "alignment": "ALIGNED",
+    "violations": [],
+    "violation_count": 0,
+    "primary_intent": "unknown",
+    "functional_caps_detected": [],
+    "attempts_taken": 2
+  },
+  "generated_code": "def add_and_write(num1, num2):\n    result = num1 + num2\n    return result"
+}
